@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Repo Issue Management</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+
+    <header>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-3 input-container">
+                    <h3>Github Login</h3>
+                    <div class="  alert alert-danger error d-none" role="alert">Error</div>
+                    <label>Username</label>
+                    <input id="username" name="username" value="" type="text" placeholder="username" class="form-control" required>
+                    <label>Password</label>
+                    <input id="password" name="password" value="" type="password" placeholder="password" class="form-control" required>
+                    <label>Search any User</label>
+                    <input id="gitusername" name="gitusername" value="" type="text" placeholder="Search any user" class="form-control" required>
+                    <br/>
+                    <button id="getRepo" name="getUser" class="btn btn-primary float-right">Get Repo</button>
+                </div>
+                <div class="col-md-9 ">
+                    <h2>Repository Listing </h2>
+                    <div id="repoList">No Data</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal -->
+    <div id="createIssue" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success d-none" role="alert" id="success"></div>
+                    <div class="form-group">
+                        <div class="col-md-12 input-container">
+                            <input id="subject" name="subject" type="text" placeholder="Subject" class="form-control" required>
+                            <span class="terror d-none">Error</span>
+                            <br/>
+                            <textarea id="desc" name="desc" type="text" placeholder="Description" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="createIssueBtn" name="createIssueBtn" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
